@@ -1,7 +1,9 @@
 ---
 import '../styles/global.css';
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { CardWrapper } from "@/components/CardWrapper";
 import { CarouselWrapper } from "@/components/CarouselWrapper";
+import { X } from "lucide-react"; // Import X icon if you want, or use text
 ---
 
 <html lang="en">
@@ -15,20 +17,98 @@ import { CarouselWrapper } from "@/components/CarouselWrapper";
 
     <body class="bg-black text-white min-h-screen relative overflow-x-hidden">
         
-        <!-- 1. The Canvas for Three.js -->
-        <!-- fixed inset-0 -z-10 puts it behind everything -->
+        <!-- Background via Three.js (fixed inset-0 -z-10 puts it behind) -->
         <canvas id="canvas" class="fixed inset-0 -z-10 w-full h-full pointer-events-none"></canvas>
 
-        <!-- 2. Your Content (z-10 ensures it sits on top) -->
-        <div class="relative z-10 grid place-items-center h-screen content-center gap-4">
-            
-            <a href="/" class={buttonVariants({ variant: "default" })}>API Link</a>
+        <!-- Content (z-10 sits on top) -->
+        <div class="relative z-10 grid place-items-center h-screen content-center p-4">
 
-            <CarouselWrapper client:load />
+            <!-- Main Content Container -->
+            <div id="main-content" class="flex flex-col items-center text-center gap-6">
+                <h1 class="font-mono text-4xl md:text-6xl font-bold">Alex Alvarez</h1>
+                <h2 class="font-mono text-xl md:text-2xl">senior software engineer @ RTX</h2>
+                
+                <div class="flex gap-4 mt-4">
+                    <Button id="about-btn" size="lg" variant="default">About</Button>
+                    <Button id="projects-btn" size="lg" varianet="default">Projects</Button>
+                </div>
+            </div>
+
+			<div id="about-container" class="hidden flex items-center gap-4 w-3xl transition-all duration-300 ease-in-out">
+                <CardWrapper />
+            </div>
+            
+            <div id="projects-container" class="hidden flex items-center gap-4 w-3xl transition-all duration-300 ease-in-out">
+                <CarouselWrapper client:load/>
+            </div>
+
+			<!-- <a href="/" class={buttonVariants({ variant: "default" })}>API Link</a> -->
 
         </div>
 
-        <!-- 3. Import the script -->
         <script src="../scripts/bg_animated.js"></script>
+        <script>
+			const mainContent = document.getElementById('main-content');
+			const aboutBtn = document.getElementById('about-btn');
+			const aboutContainer = document.getElementById('about-container');
+            const projectsBtn = document.getElementById('projects-btn');
+            const projectsContainer = document.getElementById('projects-container');
+
+			function showAbout() {
+                mainContent?.classList.add('hidden');
+				aboutContainer?.classList.remove('hidden');
+			}
+
+			function hideAbout() {
+                mainContent?.classList.remove('hidden');
+				aboutContainer?.classList.add('hidden');
+			}
+
+			if (aboutBtn) {
+                aboutBtn.addEventListener('click', (e) => {
+                    // Stop propagation so click doesn't trigger document click listener
+                    e.stopPropagation();
+                    showAbout();
+                });
+			}
+
+            function showProjects() {
+                mainContent?.classList.add('hidden');
+                projectsContainer?.classList.remove('hidden');
+            }
+
+            function hideProjects() {
+                mainContent?.classList.remove('hidden');
+                projectsContainer?.classList.add('hidden');
+            }
+
+            if (projectsBtn) {
+                projectsBtn.addEventListener('click', (e) => {
+                    // Stop propagation so click doesn't trigger document click listener
+                    e.stopPropagation();
+                    showProjects();
+                });
+            }
+
+			document.addEventListener('click', (event) => {
+                if (aboutContainer && !aboutContainer.classList.contains('hidden')) {
+                    const target = event.target as Node;
+                    
+                    // Check click OUTSIDE projects container
+                    if (!aboutContainer.contains(target)) {
+                        hideAbout();
+                    }
+                }
+
+                if (projectsContainer && !projectsContainer.classList.contains('hidden')) {
+                    const target = event.target as Node;
+                    
+                    // Check click OUTSIDE projects container
+                    if (!projectsContainer.contains(target)) {
+                        hideProjects();
+                    }
+                }
+            });
+        </script>
     </body>
 </html>

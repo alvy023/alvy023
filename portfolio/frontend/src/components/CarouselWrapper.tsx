@@ -9,7 +9,7 @@ import {
 
 export function CarouselWrapper() {
   return (
-    <Carousel className="w-full max-w-md">
+    <Carousel className="w-full max-w-3xl">
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
