@@ -13,13 +13,22 @@ import { CarouselWrapper } from "@/components/CarouselWrapper";
         <title>Alex's Portfolio</title>
     </head>
 
-    <body>
-        <div class="grid place-items-center h-screen content-center gap-4">
+    <body class="bg-black text-white min-h-screen relative overflow-x-hidden">
+        
+        <!-- 1. The Canvas for Three.js -->
+        <!-- fixed inset-0 -z-10 puts it behind everything -->
+        <canvas id="canvas" class="fixed inset-0 -z-10 w-full h-full pointer-events-none"></canvas>
+
+        <!-- 2. Your Content (z-10 ensures it sits on top) -->
+        <div class="relative z-10 grid place-items-center h-screen content-center gap-4">
             
             <a href="/" class={buttonVariants({ variant: "default" })}>API Link</a>
 
             <CarouselWrapper client:load />
 
         </div>
+
+        <!-- 3. Import the script -->
+        <script src="../scripts/bg_animated.js"></script>
     </body>
 </html>
