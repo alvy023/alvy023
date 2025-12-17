@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import { buttonVariants } from "@/components/ui/button";
+import { CarouselWrapper } from "@/components/CarouselWrapper";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Alex's Portfolio</title>
+    </head>
+
+    <body>
+        <div class="grid place-items-center h-screen content-center gap-4">
+            
+            <a href="/" class={buttonVariants({ variant: "default" })}>API Link</a>
+
+            <CarouselWrapper client:load />
+
+        </div>
+    </body>
+</html>
