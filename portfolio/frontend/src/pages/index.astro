@@ -3,8 +3,12 @@ import '../styles/global.css';
 import { Button, buttonVariants } from "@/components/ui/button";
 import { CardWrapper } from "@/components/CardWrapper";
 import { CarouselWrapper } from "@/components/CarouselWrapper";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { FaBluesky } from "react-icons/fa6";
+import { Mail } from "lucide-react";
+import { RiBlueskyLine } from "react-icons/ri";
+import { GithubIcon } from "@/components/ui/github";
+import { LinkedinIcon } from "@/components/ui/linkedin";
+import { DiscordIcon } from "@/components/ui/discord";
+
 ---
 
 <html lang="en">
@@ -30,29 +34,34 @@ import { FaBluesky } from "react-icons/fa6";
                 <h2 class="font-mono text-xl md:text-2xl">senior software engineer @ RTX</h2>
                 
                 <div class="flex gap-4 mt-4">
-                    <Button id="about-btn" size="lg" variant="default">About</Button>
-                    <Button id="projects-btn" size="lg" variant="default">Projects</Button>
+                    <Button id="about-btn" size="lg" variant="default" className="w-32">About</Button>
+                    <Button id="projects-btn" size="lg" variant="default" className="w-32">Projects</Button>
                 </div>
 
                 <div class="flex gap-2 mt-2">
                     <a href="https://github.com/alvy023" target="_blank" rel="noreferrer">
-                        <Button variant="ghost" size="icon-sm">
-                            <FaGithub className="!size-5" />
+                        <Button variant="ghost" size="icon">
+                            <GithubIcon client:load className="[&_svg]:!size-6" />
+                        </Button>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer">
+                        <Button variant="ghost" size="icon">
+                            <DiscordIcon client:load className="[&_svg]:!size-6" />
+                        </Button>
+                    </a>
+                    <a href="#">
+                        <Button variant="ghost" size="icon">
+                            <RiBlueskyLine className="size-6" />
                         </Button>
                     </a>
                     <a href="https://linkedin.com/in/aralvarez023" target="_blank" rel="noreferrer">
-                        <Button variant="ghost" size="icon-sm">
-                            <FaLinkedin className="!size-5" />
-                        </Button>
-                    </a>
-                    <a href="" target="_blank" rel="noreferrer">
-                        <Button variant="ghost" size="icon-sm">
-                            <FaBluesky className="!size-5" />
+                        <Button variant="ghost" size="icon">
+                            <LinkedinIcon client:load className="[&_svg]:!size-6" />
                         </Button>
                     </a>
                     <a href="mailto:aralvarez023@gmail.com">
-                        <Button variant="ghost" size="icon-sm">
-                            <FaEnvelope className="!size-5" />
+                        <Button variant="ghost" size="icon">
+                            <Mail className="size-6" />
                         </Button>
                     </a>
                 </div>
