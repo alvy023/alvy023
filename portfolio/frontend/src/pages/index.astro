@@ -3,7 +3,8 @@ import '../styles/global.css';
 import { Button, buttonVariants } from "@/components/ui/button";
 import { CardWrapper } from "@/components/CardWrapper";
 import { CarouselWrapper } from "@/components/CarouselWrapper";
-import { X } from "lucide-react"; // Import X icon if you want, or use text
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaBluesky } from "react-icons/fa6";
 ---
 
 <html lang="en">
@@ -30,11 +31,34 @@ import { X } from "lucide-react"; // Import X icon if you want, or use text
                 
                 <div class="flex gap-4 mt-4">
                     <Button id="about-btn" size="lg" variant="default">About</Button>
-                    <Button id="projects-btn" size="lg" varianet="default">Projects</Button>
+                    <Button id="projects-btn" size="lg" variant="default">Projects</Button>
+                </div>
+
+                <div class="flex gap-2 mt-2">
+                    <a href="https://github.com/alvy023" target="_blank" rel="noreferrer">
+                        <Button variant="ghost" size="icon-sm">
+                            <FaGithub className="!size-5" />
+                        </Button>
+                    </a>
+                    <a href="https://linkedin.com/in/aralvarez023" target="_blank" rel="noreferrer">
+                        <Button variant="ghost" size="icon-sm">
+                            <FaLinkedin className="!size-5" />
+                        </Button>
+                    </a>
+                    <a href="" target="_blank" rel="noreferrer">
+                        <Button variant="ghost" size="icon-sm">
+                            <FaBluesky className="!size-5" />
+                        </Button>
+                    </a>
+                    <a href="mailto:aralvarez023@gmail.com">
+                        <Button variant="ghost" size="icon-sm">
+                            <FaEnvelope className="!size-5" />
+                        </Button>
+                    </a>
                 </div>
             </div>
 
-			<div id="about-container" class="hidden flex items-center gap-4 w-3xl transition-all duration-300 ease-in-out">
+            <div id="about-container" class="hidden flex items-center gap-4 w-3xl transition-all duration-300 ease-in-out">
                 <CardWrapper />
             </div>
             
@@ -46,69 +70,8 @@ import { X } from "lucide-react"; // Import X icon if you want, or use text
 
         </div>
 
-        <script src="../scripts/bg_animated.js"></script>
-        <script>
-			const mainContent = document.getElementById('main-content');
-			const aboutBtn = document.getElementById('about-btn');
-			const aboutContainer = document.getElementById('about-container');
-            const projectsBtn = document.getElementById('projects-btn');
-            const projectsContainer = document.getElementById('projects-container');
-
-			function showAbout() {
-                mainContent?.classList.add('hidden');
-				aboutContainer?.classList.remove('hidden');
-			}
-
-			function hideAbout() {
-                mainContent?.classList.remove('hidden');
-				aboutContainer?.classList.add('hidden');
-			}
-
-			if (aboutBtn) {
-                aboutBtn.addEventListener('click', (e) => {
-                    // Stop propagation so click doesn't trigger document click listener
-                    e.stopPropagation();
-                    showAbout();
-                });
-			}
-
-            function showProjects() {
-                mainContent?.classList.add('hidden');
-                projectsContainer?.classList.remove('hidden');
-            }
-
-            function hideProjects() {
-                mainContent?.classList.remove('hidden');
-                projectsContainer?.classList.add('hidden');
-            }
-
-            if (projectsBtn) {
-                projectsBtn.addEventListener('click', (e) => {
-                    // Stop propagation so click doesn't trigger document click listener
-                    e.stopPropagation();
-                    showProjects();
-                });
-            }
-
-			document.addEventListener('click', (event) => {
-                if (aboutContainer && !aboutContainer.classList.contains('hidden')) {
-                    const target = event.target as Node;
-                    
-                    // Check click OUTSIDE projects container
-                    if (!aboutContainer.contains(target)) {
-                        hideAbout();
-                    }
-                }
-
-                if (projectsContainer && !projectsContainer.classList.contains('hidden')) {
-                    const target = event.target as Node;
-                    
-                    // Check click OUTSIDE projects container
-                    if (!projectsContainer.contains(target)) {
-                        hideProjects();
-                    }
-                }
-            });
-        </script>
+        <script src="../scripts/background.js"></script>
+        <script src="../scripts/about.ts"></script>
+        <script src="../scripts/projects.ts"></script>
     </body>
 </html>
