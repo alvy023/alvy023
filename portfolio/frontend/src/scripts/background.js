@@ -26,12 +26,12 @@ const surfaceResolution = 500;
 const ripples = [];
 
 // Create the surface and square colors
-const squareColorPink = new THREE.Color();
-squareColorPink.setHex(0xFF677A);
-const squareColorOrange = new THREE.Color();
-squareColorOrange.setHex(0xff8904);
+const squareColorGreen = new THREE.Color();
+squareColorGreen.setHex(0x4FC879); // Vibrant Emerald
+const squareColorYellow = new THREE.Color();
+squareColorYellow.setHex(0xFFDA03); // Sunflower Yellow
 const surfaceColor = new THREE.Color();
-surfaceColor.setHex(0xbe185d);
+surfaceColor.setHex(0x28C864); // Standard Emerald -> 40, 200, 100
 
 // Create surface geometry
 const surfaceGeometry = new THREE.PlaneGeometry(
@@ -160,10 +160,11 @@ function updateSurface() {
 function getRandomColor() {
     // Orange = rgb(248,131,121), Pink = rgb(255,0,255)
     // v2 rgb(255, 137, 4), rgb(246, 51, 154)
+    // Green = rgb(79, 200, 121), Yellow = rgb(255, 218, 3)
 
-    const r = Math.floor(Math.random() * (255 - 246 + 1) + 246);
-    const g = Math.floor(Math.random() * (137 - 51 + 15) + 51); // bias 15
-    const b = Math.floor(Math.random() * (154 - 4 + 15) + 4); // bias 15
+    const r = Math.floor(Math.random() * (255 - 79 + 1) + 79); // bias 1
+    const g = Math.floor(Math.random() * (218 - 200 + 15) + 200); // bias 15
+    const b = Math.floor(Math.random() * (121 - 3 + 15) + 3); // bias 15
 
     return (r << 16) | (g << 8) | b;
 }

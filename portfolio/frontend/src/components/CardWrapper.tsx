@@ -13,16 +13,19 @@ export function CardWrapper() {
         <CardHeader className="flex items-center justify-center">
           <CardTitle className="text-2xl font-bold">About Me</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col items-center justify-center p-6 text-center min-h-[300px]">
-          <p className="text-lg font-medium">
-            I am a senior software engineer at RTX.
+        <CardContent className="flex flex-col items-center justify-center p-10 text-center min-h-[300px]">
+          {/* Add Image Here */}
+          <p className="text-lg font-medium text-justify">
+            I'm a Senior Software Engineer at RTX where I develop and maintain sensor data adaptation services 
+            for combat systems on the Zumwalt Destroyer platform.
             <br />
             <br />
-            (Add your bio here)
+            When I'm not working, I'm usually running or cycling, gaming with friends, or spending time with my partner.
+            Feel free to reach out with interesting opportunities or if you want to chat about similar interests!
           </p>
         </CardContent>
         <CardFooter className="flex items-center justify-center">
-          <span className="text-sm opacity-80">Based in [Location]</span>
+          <span className="text-sm opacity-80">Based in Nottingham, NH</span>
         </CardFooter>
       </Card>
     </div>
