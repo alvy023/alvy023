@@ -1,5 +1,6 @@
 import type { CollectionEntry } from "astro:content"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import {
   Carousel,
   CarouselContent,
@@ -29,15 +30,12 @@ export function CarouselWrapper({ projects }: Props) {
                     alt={project.data.title}
                     className="w-full aspect-video object-cover rounded-md"
                   />
-                  <p className="text-sm text-black/80">{project.data.summary}</p>
+                  <p className="text-lg font-medium text-center">{project.data.summary}</p>
                 </CardContent>
                 <CardFooter className="flex items-center justify-center">
-                  <a
-                    href={`/projects/${project.id}`}
-                    className="text-sm font-semibold underline underline-offset-2"
-                  >
-                    Tell me more →
-                  </a>
+                  <Button variant="ghost" className="hover:bg-transparent hover:border-3 hover:border-white">
+                    <a href={`/projects/${project.id}`}>tell me more →</a>
+                  </Button>
                 </CardFooter>
               </Card>
             </div>
