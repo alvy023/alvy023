@@ -42,8 +42,8 @@ export function CarouselWrapper({ projects }: Props) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-primary hover:enabled:bg-secondary hover:disabled:bg-primary border-current border-1 hover:enabled:border-white text-black"/>
-      <CarouselNext className="bg-secondary hover:enabled:bg-primary hover:disabled:bg-secondary border-current border-1 hover:enabled:border-white text-black" />
+      <CarouselPrevious className="bg-primary hover:enabled:bg-secondary border-current border-1 hover:enabled:border-white text-black"/>
+      <CarouselNext className="bg-secondary hover:enabled:bg-primary border-current border-1 hover:enabled:border-white text-black" />
     </Carousel>
   )
 }
