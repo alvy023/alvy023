@@ -9,7 +9,7 @@
   <a href=""><img alt="Discord" src="https://img.shields.io/badge/Discord-0d0e12?style=flat-square&logo=discord&logoColor=4FC879" /></a>
   <a href=""><img alt="Bluesky" src="https://img.shields.io/badge/Bluesky-0d0e12?style=flat-square&logo=bluesky&logoColor=4FC879" /></a>
   <a href="https://github.com/alvy023"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-0d0e12?style=flat-square&logo=github&logoColor=4FC879" /></a>
-  <a href="https://linkedin.com/in/aralvarez023"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0d0e12?style=flat-square&logo=linkedin&logoColor=4FC879" /></a>
+  <a href="https://linkedin.com/in/aralvarez023"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0d0e12?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM0RkM4NzkiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3Yy0xLjg1MyAwLTIuMTM2IDEuNDQ1LTIuMTM2IDIuOTM5djUuNjY3SDkuMzUxVjloMy40MTR2MS41NjFoLjA0NmMuNDc3LS45IDEuNjM3LTEuODUgMy4zNy0xLjg1YzMuNjAxIDAgNC4yNjcgMi4zNyA0LjI2NyA1LjQ1NXY2LjI4NnpNNS4zMzcgNy40MzNhMi4wNiAyLjA2IDAgMCAxLTIuMDYzLTIuMDY1YTIuMDY0IDIuMDY0IDAgMSAxIDIuMDYzIDIuMDY1bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0ek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAweiIvPjwvc3ZnPg==&logoColor=4FC879" /></a>
   <a href="mailto:mail@alex-alvarez.com"><img alt="Email" src="https://img.shields.io/badge/Email-0d0e12?style=flat-square&logo=gmail&logoColor=4FC879" /></a>
 </p>
 
