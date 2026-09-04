@@ -20,9 +20,9 @@ export function CarouselWrapper({ projects }: Props) {
         {projects.map((project) => (
           <CarouselItem key={project.id}>
             <div className="p-1">
-              <Card className="bg-gradient-to-r from-primary to-secondary shadow-lg border-0">
+              <Card className="bg-background shadow-lg border-1">
                 <CardHeader className="flex items-center justify-center">
-                  <CardTitle className="text-xl font-bold">{project.data.title}</CardTitle>
+                  <CardTitle className="text-xl text-foreground font-bold">{project.data.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col items-center justify-center gap-3 p-6 text-center">
                   <img
@@ -30,10 +30,10 @@ export function CarouselWrapper({ projects }: Props) {
                     alt={project.data.title}
                     className="w-full aspect-video object-cover rounded-md"
                   />
-                  <p className="text-lg font-medium text-center">{project.data.summary}</p>
+                  <p className="text-lg text-foreground font-medium text-center">{project.data.summary}</p>
                 </CardContent>
                 <CardFooter className="flex items-center justify-center">
-                  <Button variant="ghost" className="hover:bg-transparent hover:border-3 hover:border-white">
+                  <Button variant="link">
                     <a href={`/projects/${project.id}`}>tell me more →</a>
                   </Button>
                 </CardFooter>
@@ -42,8 +42,8 @@ export function CarouselWrapper({ projects }: Props) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-primary hover:enabled:bg-secondary border-current border-1 hover:enabled:border-white text-black"/>
-      <CarouselNext className="bg-secondary hover:enabled:bg-primary border-current border-1 hover:enabled:border-white text-black" />
+      <CarouselPrevious className="hover:enabled:bg-muted border-2"/>
+      <CarouselNext className="hover:enabled:bg-muted border-2" />
     </Carousel>
   )
 }

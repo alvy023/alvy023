@@ -9,13 +9,13 @@ import {
 export function CardWrapper() {
   return (
     <div className="w-full max-w-3xl p-1">
-      <Card className="bg-gradient-to-r from-primary to-secondary shadow-lg border-0">
+      <Card className="bg-background shadow-lg border-2">
         <CardHeader className="flex items-center justify-center">
-          <CardTitle className="text-2xl font-bold">About Me</CardTitle>
+          <CardTitle className="text-2xl text-foreground font-bold">About Me</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-center p-10 text-center min-h-[300px]">
           {/* Add Image Here */}
-          <p className="text-lg font-medium text-justify">
+          <p className="text-lg text-foreground font-medium text-justify">
             I'm a Senior Software Engineer at RTX where I develop and maintain sensor data adaptation services 
             for combat systems on the Zumwalt Destroyer platform.
             <br />
@@ -25,7 +25,7 @@ export function CardWrapper() {
           </p>
         </CardContent>
         <CardFooter className="flex items-center justify-center">
-          <span className="text-sm opacity-80">Based in Nottingham, NH</span>
+          <span className="text-sm text-foreground opacity-80">Based in Nottingham, NH</span>
         </CardFooter>
       </Card>
     </div>
