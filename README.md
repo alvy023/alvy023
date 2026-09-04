@@ -16,6 +16,7 @@
 ---
 
 ### projects
+<br>
 
 **[alex-alvarez.com](https://alex-alvarez.com)** - personal website
 
