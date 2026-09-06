@@ -28,7 +28,7 @@ export function CarouselWrapper({ projects }: Props) {
                   <img
                     src={project.data.coverImage}
                     alt={project.data.title}
-                    className="w-full aspect-video object-cover rounded-md"
+                    className="w-full aspect-video object-scale-down rounded-md"
                   />
                   <p className="text-lg text-foreground font-medium text-center">{project.data.summary}</p>
                 </CardContent>
