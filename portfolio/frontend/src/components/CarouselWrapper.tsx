@@ -33,9 +33,9 @@ export function CarouselWrapper({ projects }: Props) {
                   <p className="text-lg text-foreground font-medium text-center">{project.data.summary}</p>
                 </CardContent>
                 <CardFooter className="flex items-center justify-center">
-                  <Button variant="link">
+                  {/* <Button variant="link">
                     <a href={`/projects/${project.id}`}>tell me more →</a>
-                  </Button>
+                  </Button> */}
                 </CardFooter>
               </Card>
             </div>
