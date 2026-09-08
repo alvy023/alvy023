@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://alex-alvarez.com">
-    <img alt="my personal portfolio" width="800" src="assets/portfolio-preview.gif" />
+    <img alt="my personal portfolio" width="1050" src="assets/portfolio_v1.gif" />
   </a>
 </p>
 
