@@ -34,6 +34,5 @@
 
 ![Lua](https://img.shields.io/badge/Lua-000080?style=flat&logo=lua&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat&logo=n8n&logoColor=white)
-
 ![CurseForge Downloads](https://img.shields.io/curseforge/dt/1270794?style=flat&logo=curseforge&label=CurseForge%20downloads)
 
