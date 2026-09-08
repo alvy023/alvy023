@@ -14,7 +14,11 @@ export function CardWrapper() {
           <CardTitle className="text-2xl text-foreground font-bold">About Me</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-center p-10 text-center min-h-[300px]">
-          {/* Add Image Here */}
+          <img
+            src="/professional_dual_v1.png"
+            alt="Alex Alvarez"
+            className="w-full max-w-md aspect-[7/5] object-scale-down rounded-md mb-6"
+          />
           <p className="text-lg text-foreground font-medium text-justify">
             I'm a Senior Software Engineer at RTX where I develop and maintain sensor data adaptation services 
             for combat systems on the Zumwalt Destroyer platform.
