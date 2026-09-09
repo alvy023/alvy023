@@ -20,7 +20,7 @@ export function CarouselWrapper({ projects }: Props) {
         {projects.map((project) => (
           <CarouselItem key={project.id}>
             <div className="p-1">
-              <Card className="bg-background shadow-lg border-1">
+              <Card className="bg-background shadow-lg border">
                 <CardHeader className="flex items-center justify-center">
                   <CardTitle className="text-xl text-foreground font-bold">{project.data.title}</CardTitle>
                 </CardHeader>
