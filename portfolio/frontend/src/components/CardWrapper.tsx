@@ -16,7 +16,7 @@ export function CardWrapper() {
         <CardContent className="flex flex-col items-center justify-center p-10 text-center min-h-[300px]">
           <img
             src="/professional_dual_v1.png"
-            alt="<oops images of me didn't load...>"
+            alt="Photo of Alex Alvarez"
             className="w-full max-w-md aspect-video object-scale-down rounded-md"
           />
           <p className="text-lg text-foreground font-medium text-justify">
