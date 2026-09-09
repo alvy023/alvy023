@@ -312,44 +312,6 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-// // Get the about modal elements
-// const aboutModal = document.getElementById("about-modal");
-// const aboutBtn = document.getElementById("about-button");
-// const closeAboutSpan = document.getElementById("close-about-modal");
-
-// // Get the projects modal elements
-// const projectsModal = document.getElementById("projects-modal");
-// const projectsBtn = document.getElementById("projects-button");
-// const closeProjectsSpan = document.getElementById("close-projects-modal");
-
-// // --- About Modal Logic ---
-// aboutBtn.onclick = function() {
-//     aboutModal.style.display = "block";
-// }
-
-// closeAboutSpan.onclick = function() {
-//     aboutModal.style.display = "none";
-// }
-
-// // --- Projects Modal Logic ---
-// projectsBtn.onclick = function() {
-//     projectsModal.style.display = "block";
-// }
-
-// closeProjectsSpan.onclick = function() {
-//     projectsModal.style.display = "none";
-// }
-
-// When the user clicks anywhere outside of either modal, close them
-window.onclick = function(event) {
-    if (event.target == aboutModal) {
-        aboutModal.style.display = "none";
-    }
-    if (event.target == projectsModal) {
-        projectsModal.style.display = "none";
-    }
-}
-
 // Handle window resizing
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
