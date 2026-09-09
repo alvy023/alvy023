@@ -17,7 +17,7 @@ export function CardWrapper() {
           <img
             src="/professional_dual_v1.png"
             alt="<oops images of me didn't load...>"
-            className="w-full max-w-md aspect-[7/5] object-scale-down rounded-md mb-6"
+            className="w-full max-w-md aspect-video object-scale-down rounded-md"
           />
           <p className="text-lg text-foreground font-medium text-justify">
             I'm a Senior Software Engineer at RTX where I develop and maintain sensor data adaptation services 
